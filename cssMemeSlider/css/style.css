@@ -1,0 +1,47 @@
+/* vars start*/
+:root {
+    --black: #000000;
+    --white: #ffffff;
+
+    --ff-roboto: 'Roboto', sans-serif;
+
+    --page-width: 1440px;
+}
+
+/*vars end*/
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), local("Roboto-Regular"),
+        url(./../assets/fonts/Roboto/Roboto-Regular.woff2) format("woff2"),
+        url(./../assets/fonts/Roboto/Roboto-Regular.woff) format("woff"),
+        url(./../assets/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+    min-width: 320px;
+    font-family: var(--ff-roboto);
+    font-size: 1.25rem;
+    line-height: 2.5rem;
+    color: var(--black);
+    background-color: var(--white);
+    font-style: normal;
+    font-weight: normal;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+}
