@@ -36,8 +36,6 @@ body {
     min-height: 100%;
     min-width: 320px;
     font-family: var(--ff-roboto);
-    font-size: 1.25rem;
-    line-height: 2.5rem;
     color: var(--black);
     background-color: var(--white);
     font-style: normal;
@@ -49,32 +47,33 @@ body {
 .page {
     max-width: var(--page-width);
     margin: 0 auto;
-    padding: 1.25rem ;
+    padding: 1.25rem;
     min-height: 100%;
 }
 
-.page__slider{
+.page__slider {
     margin: 0 auto;
+    max-height: calc(100vh - 2.5rem);
 }
 
 .slider {
-    aspect-ratio: 8 / 5;
-    max-height: calc(100vh - 2.5rem);
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    height: 100vh;
     border-radius: 1rem;
-    padding: 1.25rem;
+    padding: 1rem;
     box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
     background: var(--gradient);
-    
 }
 
 
-.slider__inner{
+.slider__inner {
     height: 100%;
     display: grid;
     grid-template-areas:
         "image image"
         "caption controls";
-    grid-template-columns: minmax(0, 1fr) minmax(max-content, 1fr);
+    grid-template-columns: 50% 50%;
     grid-template-rows: minmax(0, 1fr) auto;
     overflow-x: hidden;
     border-radius: .5rem;
@@ -101,13 +100,13 @@ body {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0.5rem 1.25rem;
+    padding: 0 1.25rem;
     transition: all 1s ease;
     background-color: var(--black);
     color: var(--white)
 }
 
-.slider__controls{
+.slider__controls {
     grid-area: controls;
     display: flex;
     background-color: black;
@@ -115,9 +114,9 @@ body {
     align-items: center;
     flex-wrap: wrap;
     z-index: 10;
-    padding: 0.5rem 1.25rem;
+    /* padding: 0 1.25rem; */
     justify-content: flex-end;
-    
+
 }
 
 
@@ -129,18 +128,18 @@ body {
     z-index: -10;
 }
 
-.slider__label{
+.slider__label {
     cursor: pointer;
     padding: .75rem;
     border-radius: 50%;
 }
 
 .slider__dot {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
     background: var(--blue);
-    border: 5px solid var(--blue);
+    border: 0.2rem solid var(--blue);
     transition: all 0.3s ease;
 }
 
@@ -152,7 +151,8 @@ body {
 .slider__input:checked+.slider__item {
     background-color: rgba(0, 0, 0, 1);
 }
-.slider__input:checked+.slider__item+.slider__caption{
+
+.slider__input:checked+.slider__item+.slider__caption {
     opacity: 1;
 }
 
@@ -167,39 +167,43 @@ body {
 }
 
 
-.slider__input:checked:nth-of-type(1) ~ .slider__controls :nth-child(1) .slider__dot,
-.slider__input:checked:nth-of-type(2) ~ .slider__controls :nth-child(2) .slider__dot,
-.slider__input:checked:nth-of-type(3) ~ .slider__controls :nth-child(3) .slider__dot,
-.slider__input:checked:nth-of-type(4) ~ .slider__controls :nth-child(4) .slider__dot,
-.slider__input:checked:nth-of-type(5) ~ .slider__controls :nth-child(5) .slider__dot,
-.slider__input:checked:nth-of-type(6) ~ .slider__controls :nth-child(6) .slider__dot,
-.slider__input:checked:nth-of-type(7) ~ .slider__controls :nth-child(7) .slider__dot,
-.slider__input:checked:nth-of-type(8) ~ .slider__controls :nth-child(8) .slider__dot,
-.slider__input:checked:nth-of-type(9) ~ .slider__controls :nth-child(9) .slider__dot,
-.slider__input:checked:nth-of-type(10) ~ .slider__controls :nth-child(10) .slider__dot{
+.slider__input:checked:nth-of-type(1)~.slider__controls :nth-child(1) .slider__dot,
+.slider__input:checked:nth-of-type(2)~.slider__controls :nth-child(2) .slider__dot,
+.slider__input:checked:nth-of-type(3)~.slider__controls :nth-child(3) .slider__dot,
+.slider__input:checked:nth-of-type(4)~.slider__controls :nth-child(4) .slider__dot,
+.slider__input:checked:nth-of-type(5)~.slider__controls :nth-child(5) .slider__dot,
+.slider__input:checked:nth-of-type(6)~.slider__controls :nth-child(6) .slider__dot,
+.slider__input:checked:nth-of-type(7)~.slider__controls :nth-child(7) .slider__dot,
+.slider__input:checked:nth-of-type(8)~.slider__controls :nth-child(8) .slider__dot,
+.slider__input:checked:nth-of-type(9)~.slider__controls :nth-child(9) .slider__dot,
+.slider__input:checked:nth-of-type(10)~.slider__controls :nth-child(10) .slider__dot {
     background: var(--black);
 }
 
 
-@media (max-width: 800px){
-    .slider {
-        aspect-ratio: 1 / 1;
-    }
-
-    .slider__inner{
-        grid-template-areas: 
-        "image"
-        "controls"
-        "caption";
+@media (max-width: 800px) {
+    .slider__inner {
+        grid-template-areas:
+            "image"
+            "controls"
+            "caption";
         grid-template-columns: 1fr;
         grid-template-rows: minmax(0, 1fr) auto auto;
     }
-    .slider__item{
+
+    .slider__item {
         padding: 1rem;
     }
 
-    .slider__controls{
+    .slider__controls {
         margin-bottom: 1rem;
         justify-content: flex-start;
     }
+
+    .slider__label {
+        cursor: pointer;
+        padding: .5rem;
+        border-radius: 50%;
+    }
+
 }
