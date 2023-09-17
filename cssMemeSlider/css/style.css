@@ -1,14 +1,13 @@
-/* vars start*/
 :root {
     --black: #000000;
     --white: #ffffff;
+    --breige: beige;
+    --blue: #47c5ff;
 
     --ff-roboto: 'Roboto', sans-serif;
 
-    --page-width: 1440px;
+    --page-width: 1200px;
 }
-
-/*vars end*/
 
 @font-face {
     font-family: "Roboto";
@@ -44,4 +43,52 @@ body {
     font-weight: normal;
     -webkit-text-size-adjust: 100%;
     overflow-x: hidden;
+}
+
+.page {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 1.25rem ;
+    min-height: 100%;
+}
+
+.page__slider{
+    margin: 0 auto;
+}
+
+.slider {
+
+}
+
+
+.slider__inner{
+
+}
+
+
+.slider__item {
+
+}
+
+.slider__img {}
+
+
+.slider__caption {
+
+}
+
+.slider__controls{
+
+}
+
+
+.slider__input {
+
+}
+
+.slider__label{ }
+
+
+.slider__dot {
+
 }
