@@ -179,3 +179,27 @@ body {
 .slider__input:checked:nth-of-type(10) ~ .slider__controls :nth-child(10) .slider__dot{
     background: var(--black);
 }
+
+
+@media (max-width: 800px){
+    .slider {
+        aspect-ratio: 1 / 1;
+    }
+
+    .slider__inner{
+        grid-template-areas: 
+        "image"
+        "controls"
+        "caption";
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(0, 1fr) auto auto;
+    }
+    .slider__item{
+        padding: 1rem;
+    }
+
+    .slider__controls{
+        margin-bottom: 1rem;
+        justify-content: flex-start;
+    }
+}
