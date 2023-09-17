@@ -110,15 +110,13 @@ body {
     grid-area: controls;
     display: flex;
     background-color: black;
-    display: flex;
     align-items: center;
     flex-wrap: wrap;
     z-index: 10;
-    /* padding: 0 1.25rem; */
+    padding: 0 0.25rem;
     justify-content: flex-end;
 
 }
-
 
 .slider__input {
     position: absolute;
@@ -130,7 +128,7 @@ body {
 
 .slider__label {
     cursor: pointer;
-    padding: .75rem;
+    padding: 1rem;
     border-radius: 50%;
 }
 
@@ -199,11 +197,4 @@ body {
         margin-bottom: 1rem;
         justify-content: flex-start;
     }
-
-    .slider__label {
-        cursor: pointer;
-        padding: .5rem;
-        border-radius: 50%;
-    }
-
 }
