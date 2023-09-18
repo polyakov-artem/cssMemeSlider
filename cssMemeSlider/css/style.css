@@ -192,6 +192,10 @@ body {
         padding: 1rem;
     }
 
+    .slider__label {
+        padding: 2vw;
+    }
+
     .slider__controls {
         margin-bottom: 1rem;
         justify-content: center;
