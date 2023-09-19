@@ -142,6 +142,10 @@ body {
     border-color: var(--white);
 }
 
+.slider__label:hover:active .slider__dot {
+    box-shadow: 0 0  1rem .5rem var(--blue);
+}
+
 .slider__input:checked+.slider__item {
     background-color: rgba(0, 0, 0, 1);
 }
